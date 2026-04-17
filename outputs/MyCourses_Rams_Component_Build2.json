@@ -1,0 +1,73 @@
+{
+  "build": "Build 2: Dieter Rams Components",
+  "version": "1.0",
+  "date": "2026-04-14",
+  "philosophy": "Minimalist, accessibility-first, intentional design",
+  "components": {
+    "taskItem": {
+      "name": "Task Item",
+      "states": ["overdue", "dueToday", "dueSoon", "submitted", "completed"],
+      "rule": "text + icon + color (never color alone)",
+      "accessibility": "WCAG AA, semantic color + icon redundancy",
+      "spacing": "15px padding, 10px icon-to-text gap"
+    },
+    "button": {
+      "name": "Button",
+      "variants": ["primary", "secondary", "disabled"],
+      "minHeight": "44px",
+      "accessibility": "WCAG AA touch target, focus outline"
+    },
+    "alert": {
+      "name": "Alert",
+      "types": ["success", "error", "urgent"],
+      "autoDismiss": ["5s", "none", "10s"],
+      "accessibility": "role='alert', aria-live, WCAG AA"
+    },
+    "announcementCard": {
+      "name": "Announcement Card",
+      "layout": "2-column",
+      "leftColumn": "60% (full announcement)",
+      "rightColumn": "40% (status badge)"
+    },
+    "dashboard": {
+      "name": "Task Dashboard",
+      "sections": 7,
+      "spacing": "40px section-to-section, 15px card-to-card",
+      "grid": "5px base, intentional spacing"
+    }
+  },
+  "designTokens": {
+    "colors": {
+      "brand": "#ED3F1C",
+      "neutrals": ["#FFFFFF", "#FBF8EF", "#E4DECF", "#9BA2A5", "#696765", "#292624"],
+      "accent": "#3B4B59",
+      "semantic": {
+        "bg-canvas": "#FBF8EF",
+        "bg-surface": "#FFFFFF",
+        "text-primary": "#292624"
+      }
+    },
+    "spacing": [0, 5, 10, 15, 20, 25, 30, 40, 50, 60, 80, 100, 120],
+    "typography": {
+      "h1": "28px/600",
+      "h2": "20px/600",
+      "h3": "16px/600",
+      "body": "16px/400",
+      "small": "14px/400"
+    }
+  },
+  "ramsAlignment": {
+    "innovative": "AI-native workflow",
+    "useful": "Solves task urgency, minimal distraction",
+    "aesthetic": "Minimalist beauty",
+    "honest": "Text + icon visible",
+    "unobtrusive": "Disappears, focus on work",
+    "asLittleDesignAsPossible": "5 components, 3 colors, 5px grid",
+    "score": "9/10 Rams principles achieved"
+  },
+  "rejections": {
+    "material": "Too much visual richness, contradicts clarity",
+    "carbon": "Enterprise complexity overkill for 5-day sprint",
+    "justification": "NeuroMap V1→V2→V3 iteration proved custom minimalist optimal"
+  }
+}

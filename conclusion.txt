@@ -1,0 +1,26 @@
+ ## Why Material Design Doesn't Fit MyCourses Use Case
+   Material Design is optimized for **engagement + visual richness** (Google's philosophy).
+   MyCourses needs **minimalism + clarity** to support learning focus (Rams' philosophy).
+   
+   **Conflict**: More visual signals ≠ better learning outcomes.
+   Students need to find overdue tasks, not be delighted by animations.
+   ```
+
+3. **Key insight to document**: 
+   - Material Design assumes users want visual feedback, motion, and engagement
+   - MyCourses students want: focus, clarity, speed to task completion
+   - Using Material would add visual debt that contradicts the goal
+
+
+   ## Why IBM Carbon Doesn't Fit MyCourses Use Case
+   IBM Carbon is optimized for **enterprise scale + consistency** (large teams, many products).
+   MyCourses is **single product, single designer, focused scope**.
+   
+   **Conflict**: Enterprise patterns ≠ focused product execution.
+   Adding Carbon's complexity would slow down a solo designer shipping in 1 week.
+   ```
+
+3. **Key insight to document**:
+   - IBM Carbon is excellent for teams managing 50+ components across 10+ products
+   - MyCourses is one app with 5 component types
+   - Using Carbon would require learning 100 components, implementing 5

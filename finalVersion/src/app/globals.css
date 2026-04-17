@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+.material-symbols-rounded {
+  font-family: 'Material Symbols Rounded';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: 'liga';
+  font-variation-settings: 'FILL' 1, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+  color: #292624;
+}
+
+@theme {
+  --color-brand: #ED3F1C;
+  --color-neutralPrimary: #292624;
+  --color-neutralSecondary: #696765;
+  --color-neutralTertiary: #9BA2A5;
+  --color-bgPrimary: #FFFFFF;
+  --color-bgSecondary: #FBF8EF;
+  --color-divider: #E4DECF;
+  --font-sans: "IBM Plex Sans", "sans-serif";
+}
+
+@layer base {
+  body {
+    background-color: var(--color-bgSecondary);
+    color: var(--color-neutralPrimary);
+  }
+}
+
+/* 
+  ICON BUTTONS (Circle buttons)
+  Hover: 1px -> 3px border
+  Selected: #ED3F1C bg, no border, white icon
+*/
+.icon-button {
+  transition: all 0.2s ease-in-out;
+  cursor: pointer !important;
+  pointer-events: auto !important;
+  box-sizing: border-box !important;
+}
+
+/* Default color for icons inside icon-buttons */
+.icon-button .material-symbols-rounded {
+  color: #9BA2A5 !important;
+}
+
+.icon-button:hover {
+  border-width: 3px !important;
+  border-color: #9BA2A5 !important;
+}
+
+/* Selected state */
+.icon-button.selected {
+  background-color: #ED3F1C !important;
+  border: none !important;
+}
+
+/* Force white color on all elements when selected - using a very specific selector */
+.icon-button.selected .material-symbols-rounded,
+.icon-button.selected span,
+.icon-button.selected div {
+  color: #FFFFFF !important;
+  --tw-text-opacity: 1 !important;
+}

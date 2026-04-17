@@ -1,33 +1,28 @@
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
-
-# testing
-/coverage
-
-# next.js
-/.next/
-/out/
-
-# production
-/build
-
-# misc
+# Root ignore
 .DS_Store
-*.pem
+*.zip
+*.log
 
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+# Project specific ignores
+node_modules/
+.next/
+out/
+build/
+dist/
 
-# local env files
-.env*.local
+# Subproject ignores
+finalVersion/node_modules/
+finalVersion/.next/
+finalVersion/out/
 
-# vercel
+ibm-carbon-version/node_modules/
+ibm-carbon-version/.next/
+ibm-carbon-version/out/
+
+myCourses/node_modules/
+myCourses/.next/
+myCourses/out/
+
 .vercel
-
-# typescript
-*.tsbuildinfo
-next-env.d.ts
+*.pem
+.env*.local

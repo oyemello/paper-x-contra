@@ -1,0 +1,24 @@
+@use '@carbon/react' with (
+  $css--font-face: false
+);
+
+:root {
+  @include react.theme(react.$g10);
+  
+  // Map Next.js font variables to Carbon's typography tokens
+  --cds-body-font-family: var(--font-ibm-plex-sans);
+  --cds-label-font-family: var(--font-ibm-plex-sans);
+  --cds-heading-font-family: var(--font-ibm-plex-sans);
+  --cds-code-font-family: var(--font-ibm-plex-mono);
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: var(--font-ibm-plex-sans), sans-serif;
+}
+
+body {
+  margin: 0;
+}

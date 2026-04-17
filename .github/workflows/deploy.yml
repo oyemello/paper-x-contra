@@ -28,12 +28,14 @@ jobs:
           cache: 'npm'
       - name: Install dependencies
         run: npm ci || npm install
+        working-directory: ./finalVersion
       - name: Build with Next.js
         run: npx next build
+        working-directory: ./finalVersion
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out
+          path: ./finalVersion/out
 
   deploy:
     environment:

@@ -1,71 +1,45 @@
-# Contra Dashboard - Final Version
+# MyCourses: AI-Native Design System (Contra x Paper Challenge)
 
-A modern, responsive dashboard built with **Next.js 15** and **Tailwind CSS 4**, featuring a premium interactive iconography system based on Google Material Symbols.
-
-## 🚀 Get Started
-
-### Prerequisites
-- **Node.js**: 18.17 or later
-- **npm**: 9.x or later
-
-### Installation & Development
-1. **Install dependencies**:
-   ```bash
-   npm install
-   ```
-
-2. **Run the development server**:
-   ```bash
-   npm run dev
-   ```
-
-3. **Visit**: Open [http://localhost:3000](http://localhost:3000) in your browser.
+**Project Goal**: Demonstrate a 3x speed increase in design-to-production workflows using AI-native design systems. This final version transforms a static dashboard into a high-performance, interactive React application.
 
 ---
 
-## 🎨 Design System & Interactivity
+## Stack
 
-The project implements a custom "IconButton" system designed for high interactivity and visual consistency.
+- I used 2 of my own tools:
+- NeuroMap powered by ChatGPT (for the initial brainstorming and iteration validation)
+- EDS Atlas powered by ChatGPT (for compliance, accesibility, and design system violations)
 
-### 1. Circular Icon Buttons
-All primary action icons across the dashboard (Filters, Menus, Alerts) use the `IconButton` component.
-- **Hover State**: The border thickness increases from 1px to **3px** for immediate visual feedback.
-- **Selected State**: A persistent toggle state. Click once to activate (**Red Background #ED3F1C**, **White Icon**, **No Border**). Click again to revert to default.
-- **Implementation**: Handled via `src/components/IconButton.jsx` and centralized logic in `src/app/globals.css`.
++
 
-### 2. Header Iconography
-The top navigation features a dedicated set of 40px Material Symbols on a dark background, providing quick access to messaging, notifications, and profile settings.
+- Paper & Paper MCP (for the design, and iteration)
+- Antigravity (implementation of the code)
+- Claude(tte) (as orchestrator that co-led the entire process with me)
+---
 
-### 3. Material Symbols Integration
-The project uses the **Rounded** variant of Material Symbols with standardized settings:
-- **Weight**: 200 (Lightweight, premium feel)
-- **Optical Size**: 24dp
-- **Fill**: Systematically managed via CSS for default/selected states.
+## The AI-Native Evolution: 8 Weeks to 2 Days
+
+This project represents a complete reimagining of the RIT MyCourses student dashboard. By using AI-native workflows, I successfully compressed an 8-week design cycle into **2 days**.
 
 ---
 
-## 🏗️ Project Structure
+## Technical Architecture & Key Features
 
-```text
-src/
-├── app/
-│   ├── globals.css      # Design tokens (@theme) and Icon Button CSS
-│   ├── layout.jsx       # Root layout and font imports
-│   └── page.jsx         # Primary Dashboard page assembly
-├── components/
-│   ├── IconButton.jsx   # Stateful Client Component for toggles
-│   ├── Header.jsx       # Global bar with 40px iconography
-│   ├── TasksSection.jsx  # Upcoming and Overdue task lists
-│   ├── CalendarSection.jsx # Interactive schedule and filters
-│   ├── Announcements.jsx # Course-specific alerts
-│   ├── HeroSection.jsx   # Header hero with semester info
-│   └── LastVisited.jsx   # Recently accessed course materials
-```
+The "Final Version" of the dashboard focuses on **Interactivity via State** and **Visual Consistency via Material Symbols**.
 
----
+### 1. The Interactive "IconButton" System
+Unlike standard static dashboards, this implementation uses a custom React component architecture to handle persistent user intent:
+- **Stateful Toggles**: The `IconButton.jsx` component manages the "Selected" state using React hooks. A single click activates the button, and a second click reverts it to the default state.
+- **Hover Visuals**: Implemented a non-shifting hover state where circular borders increase from 1px to **3px**, providing high-affinity feedback without layout jank.
+- **Selected Visuals**: When toggled, buttons transition to a brand-red background (`#ED3F1C`), remove their borders, and force all internal iconography to pure white (`#FFFFFF`).
 
-## 🛠️ Tech Stack
-- **Framework**: Next.js 15 (App Router)
-- **Styling**: Tailwind CSS 4
-- **Icons**: Material Symbols Rounded
-- **Environment**: Turbopack for fast HMR
+### 2. Standardized Material Design Language
+The iconography has been migrated from legacy placeholders to **Google Material Symbols (Rounded)**:
+- **Visual Weight**: All icons are locked to `wght 200`, creating a lightweight, premium feel that doesn't overwhelm the user.
+- **Unified Sizing**: Dashboard actions are standardized to 24dp, while top-tier header navigation has been optimized to **40px** for balanced hierarchy.
+- **CSS-Driven Color**: Removed legacy Tailwind utility conflicts (e.g., `!text-[#9BA2A5]`) and moved color management to `globals.css` to allow the design system to drive states across the components.
+
+### 3. Accessible Component Strategy
+Built with a "Dieter Rams" minimalist philosophy:
+- **Redundancy for Clarity**: Urgent states (Overdue/Due Today) use text + icon + color (Red), ensuring the information is accessible to colorblind users.
+- **Touch Affinity**: Every circular button maintains a minimum hit area of 44px (WCAG AA) using the `size-11` utility.
